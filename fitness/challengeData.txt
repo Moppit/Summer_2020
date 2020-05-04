@@ -1,0 +1,5 @@
+! Format: <Date>,<Day>,<Pushups>,<Plank Time (sec)>,<Run distance (km)>,Comment
+! Sample below -- not actual data yet
+5/4/20,0,5,30,0.25,This is a sample not actual data
+5/5/20,1,5,31,0.27,Second point of fake data
+5/8/20,4,6,30,0.27,Third point to test distance
