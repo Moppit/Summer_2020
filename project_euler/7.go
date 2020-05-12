@@ -45,3 +45,8 @@ func main() {
 }
 
 // result = 104743
+
+/* Improvements:
+- Could have just checked odd values instead of everything
+- Sieve's algorithm -- super useful!
+*/

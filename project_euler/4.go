@@ -33,4 +33,11 @@ func main() {
   fmt.Println(max)
 
   // result = 906609
+
+  /* Improvements
+  - Solve it mathematically!
+  abccba = a*1000 + b*100 + b*10 + a
+  Simplify the terms and then you get a mathematical formula to use
+  * so less values to brute force
+  */
 }

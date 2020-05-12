@@ -45,3 +45,5 @@ func main() {
 }
 
 // Result = 6857
+
+// Improvement: again, could use sieve since numbers aren't too large

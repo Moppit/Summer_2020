@@ -33,3 +33,7 @@ func main() {
 }
 
 // result: 232792560
+
+/* Improvements
+- Can use prime factorization on 1-20 and then find product of the greatest powers of each
+*/
