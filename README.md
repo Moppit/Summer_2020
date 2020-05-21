@@ -6,3 +6,6 @@ A good friend of mine has challenged me to work out every day! And while it prob
 
 ## Project Euler
 Another friend of mine showed me Project Euler a while ago, and it looked like buckets of fun! So, I'm just working through some of those for kicks, while using it as a good opportunity to become proficient in Golang, the language I'll be using at Twilio during my SWE internship.
+
+## Intro to Proofs Study Group
+I'm part of a study group preparing for the MATH 2001 exemption exam, so while I'm not formally taking the class, I do want to store my proofs (at least the ones done in LaTeX) somewhere.
