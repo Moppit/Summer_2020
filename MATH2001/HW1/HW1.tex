@@ -1,0 +1,85 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{hyperref} 
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[numbers]{natbib}
+\usepackage{subfiles}
+\usepackage{tkz-berge}
+
+
+\author{Michelle Tran}
+\title{Homework 1}
+
+\begin{document}
+\maketitle
+
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{cor}{Corollary}[prop]
+
+\theoremstyle{definition}
+\newtheorem{mydef}{Definition}
+
+\theoremstyle{definition}
+\newtheorem{required}{(Recommended) Problem}
+
+\theoremstyle{definition}
+\newtheorem{advanced}[required]{(Advanced) Problem}
+
+\theoremstyle{definition}
+\newtheorem{challenge}[required]{(Challenge) Problem}
+
+\theoremstyle{definition}
+\newtheorem{open}{(Open) Problem}
+
+\theoremstyle{definition}
+\newtheorem{ex}{Example}
+
+
+\section{Proof by Contrapositive} 
+
+\noindent We begin with some definitions.
+
+\begin{mydef}
+An integer $n$ is said to be \textit{even} if there is an integer $k$ such that $n = 2k$. Otherwise, $n$ is said to be \textit{odd}.
+\end{mydef}
+
+\noindent \textbf{Remark:} It follows that odd integers can be written uniquely as $n = 2k+1$ for some integer $k$. 
+
+\noindent
+\begin{mydef}
+We say that $x$ is a \textit{rational number}, denoted $x \in \mathbb{Q}$, if there exist integers $p, q$ such that $x = \dfrac{p}{q}$.
+\end{mydef}
+
+
+\noindent 
+\begin{required}
+Suppose that $a, b \in \mathbb{R}$ such that $ab \not \in \mathbb{Q}$. Then we have $a \not \in \mathbb{Q}$ or $b \not \in \mathbb{Q}$.
+\end{required}
+% This basically means show that having a product of a and b that doesn't exist in the rationals means that either a or b or both also don't exist in the rationals
+
+
+\begin{required}
+Suppose $x, y \in \mathbb{Z}$ such that $xy$ is even. Then either $x$ is even or $y$ is even.
+\end{required}
+% As an exercise, try doing this as a direct proof first. Should be able to just make x and y equal to certain even and odd values and trying each case -- but then again, it's a lot more work than doing this by contrapositive. Bc you have three cases to test whereas the contrapositive only has one case.
+
+\begin{required}
+Suppose $x, y \in \mathbb{Z}$ such that $x + y \geq 15$. Then either $x \geq 8$ or $y \geq 8$. 
+\end{required}
+% Yeah this is just a lot easier by contrapositive -- though I'm sure you could try to prove this directly -- it's just longer again
+
+\begin{required}
+Suppose $n \in \mathbb{Z}$ such that $n^{3}$ is even. Then $n$ is even.
+\end{required}
+% Yeah this would be annoying via direct proof
+
+\end{document}
