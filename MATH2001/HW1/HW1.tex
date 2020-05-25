@@ -64,22 +64,99 @@ We say that $x$ is a \textit{rational number}, denoted $x \in \mathbb{Q}$, if th
 \begin{required}
 Suppose that $a, b \in \mathbb{R}$ such that $ab \not \in \mathbb{Q}$. Then we have $a \not \in \mathbb{Q}$ or $b \not \in \mathbb{Q}$.
 \end{required}
-% This basically means show that having a product of a and b that doesn't exist in the rationals means that either a or b or both also don't exist in the rationals
 
+% This basically means show that having a product of a and b that doesn't exist in the rationals means that either a or b or both also don't exist in the rationals
+\emph{Proof by Contradiction.} Show that $\neg ((a \not \in \mathbb{Q}) \vee (b \not \in \mathbb{Q})) \Rightarrow \neg (ab \not \in \mathbb{Q})$ where $a,b \in \mathbb{R}.$
+
+$\neg ((a \not \in \mathbb{Q}) \vee (b \not \in \mathbb{Q})) \equiv (a \in \mathbb{Q}) \land (b \in \mathbb{Q})$ by DeMorgan's Law.
+
+$\neg(ab \not \in \mathbb{Q}) \equiv ab \in \mathbb{Q}$ by def. of negation.
+
+Thus, we must show that if a and b are rational, then the product ab is also rational.
+
+Symbolically: $(a \in \mathbb{Q}) \land (b \in \mathbb{Q}) \Rightarrow (ab \in \mathbb{Q})$.
+
+\phantom{}
+
+By Definition 2, a and b can be written as $a = \frac{p}{q}$ and $b = \frac{m}{n}$, where $p,q,m,n \in \mathbb{Z}$.
+
+For $a,b \in \mathbb{Q}$, $ab = \frac{p}{q}*\frac{m}{n} = \frac{pm}{qn}$ where $pm, qn \in \mathbb{Z}$ due to integer multiplication properties.
+
+Therefore, $ab \in \mathbb{Q}$ since $\frac{pm}{qn}$ is a quotient of two integers, as per Definition 2.
+
+As such, we have proven that $(a \in \mathbb{Q}) \land (b \in \mathbb{Q}) \Rightarrow (ab \in \mathbb{Q})$. 
+
+\phantom{}
+
+Hence, by the contrapositive proof, the statement if $ab \not \in \mathbb{Q}$, then we have $a \not \in \mathbb{Q}$ or $b \not \in \mathbb{Q}$ is true. \fbox \\
 
 \begin{required}
 Suppose $x, y \in \mathbb{Z}$ such that $xy$ is even. Then either $x$ is even or $y$ is even.
 \end{required}
 % As an exercise, try doing this as a direct proof first. Should be able to just make x and y equal to certain even and odd values and trying each case -- but then again, it's a lot more work than doing this by contrapositive. Bc you have three cases to test whereas the contrapositive only has one case.
+\emph{Proof by Contrapositive.} Show that $\neg$(x is even $\vee$ y is even) $\Rightarrow$ $\neg$(xy is even) where $x, y \in \mathbb{Z}$.
+
+$\equiv$ (x is odd $\land$ y is odd) $\Rightarrow$ (xy is odd) by DeMorgan's Law and the def. of negation.
+
+\phantom{}
+
+By Definition 1, x and y can be written as: $x = 2m + 1, y = 2n + 1$ where $m,n \in \mathbb{Z}$.
+
+$xy = (2m+1)(2n+1) = 4mn + 2m + 2n + 1 = 2(2mn + m + n) + 1 = 2k + 1$ where $k = 2mn + m + n$.
+
+Therefore, xy is odd, and as such, we have proven that (x is odd $\land$ y is odd) $\Rightarrow$ (xy is odd).
+
+\phantom{}
+
+Hence, by the contrapositive proof, the statement if $xy$ is even, then either $x$ is even or $y$ is even.   \fbox \\
 
 \begin{required}
 Suppose $x, y \in \mathbb{Z}$ such that $x + y \geq 15$. Then either $x \geq 8$ or $y \geq 8$. 
 \end{required}
 % Yeah this is just a lot easier by contrapositive -- though I'm sure you could try to prove this directly -- it's just longer again
+\emph{Proof by Contrapositive.} Show that $\neg((x \geq 8) \vee (y \geq 8)) \Rightarrow \neg((x+y) \geq 15)$ where $x,y \in \mathbb{Z}$.
+
+$\equiv ((x < 8) \land (y < 8)) \Rightarrow ((x+y) < 15)$ by DeMorgan's Law and def. of negation.
+
+\phantom{}
+
+% Not sure how to do this generically? There are infinite values of x and y... all I can think of is using 7 bc it's the highest int on that interval, but it's a specific value... Maybe rewrite this?
+Since x and y are integers, we can rewrite the expression $(x < 8) \land (y < 8)$ as $(x \leq 7) \land (y \leq 7)$.
+
+$x+y \leq 7+7 = 14$. Thus, 14 is the greatest possible sum of x and y. % Yeah, this is kind of voodoo... should check this
+
+Since $14 < 15$ is true, we see that it does follow that $(x+y) < 15$.
+
+\phantom{}
+
+Hence, by the contrapositive proof, the statement if $x + y \geq 15$ then either $x \geq 8$ or $y \geq 8$.   \fbox \\
 
 \begin{required}
 Suppose $n \in \mathbb{Z}$ such that $n^{3}$ is even. Then $n$ is even.
 \end{required}
 % Yeah this would be annoying via direct proof
+\emph{Proof by Contrapositive.} Show that $\neg$(n is even) $\Rightarrow \neg(n^3$ is even). 
+
+$\equiv$ (n is odd) $\Rightarrow$ ($n^3$ is odd) by the def. of negation.
+
+\phantom{}
+
+Since n is odd, it can be represented generically as $n = 2k+1$ where $k \in \mathbb{Z}$.
+
+Thus, $n^3 = (2k+1)^3$
+
+$ = (4k^2 + 4k + 1)(2k+1) $
+
+$= 8k^3 + 4k^2 + 8k^2 + 4k + 2k + 1$
+
+$= 8k^3 + 12k^2 + 6k + 1$
+
+$= 2(4k^3 + 6k^2 + 3k) + 1$
+
+$= 2t + 1$ where $t \in \mathbb{Z}$.
+
+Thus, when n is odd, $n^3$ is odd.
+
+Hence, by the contrapositive proof, the statement if $n^3$ is even, then n is even.   \fbox \\
 
 \end{document}
